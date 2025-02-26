@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --background-color: #f5f7fa;
+  --card-background: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --success: #10b981;
+  --error: #ef4444;
+  --border-color: #e5e7eb;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headers: 'Poppins', var(--font-primary);
+  --border-radius-sm: 0.5rem;
+  --border-radius: 0.8rem;
+  --border-radius-lg: 1rem;
+  --shadow-sm: 0 2px 5px rgba(0,0,0,0.08);
+  --shadow-hover: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6, .btn, .nav-link {
+  font-family: var(--font-headers);
+}
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header-card {
+  border-radius: var(--border-radius-lg);
+  background-image: linear-gradient(to right, #f9f9ff, #f5f5ff);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.header-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  background: linear-gradient(90deg, var(--primary-color), #8183fb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.card-text {
+  color: var(--text-secondary);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.vote-badge {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-width: 100px;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 20px !important;
+}
+
+.vote-badge.passed { 
+  background-color: var(--success); 
+  color: white; 
+}
+
+.vote-badge.failed { 
+  background-color: var(--error); 
+  color: white; 
+}
+
+.vote-badge.pending { 
+  background-color: #f59e0b; 
+  color: white; 
+}
+
+@media (max-width: 640px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
